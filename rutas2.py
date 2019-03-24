@@ -14,7 +14,7 @@ def index():
 	
     title = " Tu divisa"
 
-    return render_template("Index.html", title=title)
+    return render_template("index.html", title=title)
 
 
 @app.route('/Tabla_dolar')
