@@ -2,10 +2,27 @@
 <html>
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <section class="bg-secondary" id="about">
+                <div class="container">
+                    <div class="row">
+        
+        
+                    <!-- Columns are always 50% wide, on mobile and desktop -->
+        
+          <div class="col-md-6">
+            </div>
+        </div>
+        </div>
+          
+          
+        
+          
+        
+                 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <title> Tu divisa</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -18,33 +35,62 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-        
-        <div class="container">
-                <img src="http://tendenciasfx.com/wp-content/uploads/2017/07/Caracteristicas-de-las-principales-divisas-WEB.jpg" style="display: block; margin-left: auto; margin-right: auto;" height="auto" width="100%">
-            </div>
+
+    <div>
+        <img src="http://tendenciasfx.com/wp-content/uploads/2017/07/Caracteristicas-de-las-principales-divisas-WEB.jpg"
+            style="display: block; margin-left: auto; margin-right: auto;" height="auto" width="100%">
+    </div><br>
+    
+
+    
+
 
 
 </head>
 
 <body>
-  
-    <div class="container">
-        <div class=" row">
-            <div class="span12">
+    <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" style="display: block; margin-left: auto; margin-right: auto;" height="auto" width="100%" ></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       comportamiendo de divisas
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Dolar.html">Dolar</a>
+                        <a class="dropdown-item" href="euro.html">Euro</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">otra divisa</a>
+                    </div>
+                </li>
+                
+            </ul>
+            </div>
+        </div><br>
+
+
+
+            <div>
                 {% block content %}
 
                 {% endblock %}
+
             </div>
 
+            <canvas>
 
-        </div>
-
-    </div>
-
-    <canvas>
-
-    </canvas>
+            </canvas>
 
 
 </body>
