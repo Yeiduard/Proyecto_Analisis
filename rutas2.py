@@ -1,36 +1,34 @@
 from flask import Flask
-app = Flask(__name__)
-
 from flask import request
 from flask import render_template
+import Tablas_de_divisas as td
+import forms
 
 
-@app.route('/')
+app = Flask(__name__)
+
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-	 name ='Yeisson'
-	 return render_template("index.html",name=name)
-
-
-@app.route('/client')
-def client():
-	list_name=["t1","t2","t3"]
-	return render_template("client.html",list= list_name)
-
-
-
-
-#@app.route('/usuarios/<name>')
-#def usuario(name="yeisson"):
-#	age=19
-#	lista_edad=[1,2,3,4,5]
-#	return render_template("index.html", nombre=name,age=age,lista=lista_edad)
-
-#@app.route("/params/")
-#@app.route("/params/<name>")#ruta de acceso
-#def params(name="default"):
-#	param=request.args.get("params1","no contiene parametro")
-#	return " el parametro es {} ".format(name)#peticion de parametro 
-
+    
 	
+    title = " Tu divisa"
 
-app.run(debug =True ,port = 5000)    
+    return render_template("index.html", title=title)
+
+
+@app.route('/Tabla_dolar')
+def client():
+
+    x = td.x
+    y = td.y
+    return render_template("pruebagraf.html", x=x, y=y)
+
+
+def sumar(val1,val2):
+	
+	total= val1+val2
+	return total
+
+
+app.run(debug=True, port=5000)
