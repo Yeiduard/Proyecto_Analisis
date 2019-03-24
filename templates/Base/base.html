@@ -2,28 +2,13 @@
 <html>
 
 <head>
-        <section class="bg-secondary" id="about">
-                <div class="container">
-                    <div class="row">
-        
-        
-                    <!-- Columns are always 50% wide, on mobile and desktop -->
-        
-          <div class="col-md-6">
-            </div>
-        </div>
-        </div>
-          
-          
-        
-          
-        
-                 
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+   
     <title> Tu divisa</title>
+   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -40,59 +25,89 @@
         <img src="http://tendenciasfx.com/wp-content/uploads/2017/07/Caracteristicas-de-las-principales-divisas-WEB.jpg"
             style="display: block; margin-left: auto; margin-right: auto;" height="auto" width="100%">
     </div><br>
-    
-
-    
-
-
 
 </head>
 
 <body>
-    <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#" style="display: block; margin-left: auto; margin-right: auto;" height="auto" width="100%" ></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                       comportamiendo de divisas
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="Dolar.html">Dolar</a>
-                        <a class="dropdown-item" href="euro.html">Euro</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">otra divisa</a>
-                    </div>
-                </li>
-                
-            </ul>
-            </div>
-        </div><br>
-
-
-
-            <div>
+      
+        <div>
                 {% block content %}
-
+        
                 {% endblock %}
-
+        
             </div>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#" style="display: block; margin-left: auto; margin-right: auto;"
+                height="auto" width="100%"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-            <canvas>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            comportamiendo de divisas
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="Dolar.html">Dolar</a>
+                            <a class="dropdown-item" href="euro.html">Euro</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">otra divisa</a>
+                        </div>
+                    </li>
 
-            </canvas>
+                </ul>
+            </div>
+    </div><br>
+
+  
 
 
+
+
+    <section class="content-section bg-primary text-white">
+            <div class="container text-center">
+              <h2 class="mb-4">The buttons below are impossible to resist...</h2>
+              <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
+              <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
+            </div>
+          </section>
+        
+
+
+    <canvas>
+
+    </canvas>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <ul class="list-inline mb-5">
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white mr-3" href="#">
+                        <i class="icon-social-facebook"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white mr-3" href="#">
+                        <i class="icon-social-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white" href="#">
+                        <i class="icon-social-github"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-muted small mb-0">Copyright &copy; Tu divisa.com</p>
+        </div>
+    </footer>
 </body>
 
 </html>
