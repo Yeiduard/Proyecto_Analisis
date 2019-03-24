@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   
-    <title> Tu divisa</title>
-   
+    <link rel="stylesheet" href="estilo/css.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -21,93 +18,111 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
 
-    <div>
-        <img src="http://tendenciasfx.com/wp-content/uploads/2017/07/Caracteristicas-de-las-principales-divisas-WEB.jpg"
-            style="display: block; margin-left: auto; margin-right: auto;" height="auto" width="100%">
-    </div><br>
 
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar bg-dark">
+
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <strong>Inicio</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
+                aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Comportamiento de divisas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Predicciones</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <div class="md-form my-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Full Page Intro -->
+    <div class="view"
+        style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        <!-- Mask & flexbox options-->
+        <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+            <!-- Content -->
+            <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft"
+                        data-wow-delay="0.3s">
+                        <h1 class="h1-responsive font-weight-bold mt-sm-5"> Predice tu futuro </h1>
+                        <hr class="hr-dark">
+                        <h6 class="mb-4">Tu divisa es pagina web en donde  no solo podras estudiar el comportamiento de las divisas mas importantes en la actualidad, tambien podras hacer conversiones entre diferentes divisas</h6>
+
+                    </div>
+                    >
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+    </div>
 </head>
 
 <body>
-      
-        <div>
-                {% block content %}
-        
-                {% endblock %}
-        
-            </div>
-    <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#" style="display: block; margin-left: auto; margin-right: auto;"
-                height="auto" width="100%"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            comportamiendo de divisas
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="Dolar.html">Dolar</a>
-                            <a class="dropdown-item" href="euro.html">Euro</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">otra divisa</a>
-                        </div>
-                    </li>
-
-                </ul>
-            </div>
-    </div><br>
-
-  
-
-
-
-
-    <section class="content-section bg-primary text-white">
-            <div class="container text-center">
-              <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-              <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
-              <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
-            </div>
-          </section>
-        
-
-
-    <canvas>
-
-    </canvas>
-
-    <footer class="footer text-center">
+    <main>
         <div class="container">
-            <ul class="list-inline mb-5">
-                <li class="list-inline-item">
-                    <a class="social-link rounded-circle text-white mr-3" href="#">
-                        <i class="icon-social-facebook"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="social-link rounded-circle text-white mr-3" href="#">
-                        <i class="icon-social-twitter"></i>
-                    </a>
-                </li>
-                <li class="list-inline-item">
-                    <a class="social-link rounded-circle text-white" href="#">
-                        <i class="icon-social-github"></i>
-                    </a>
-                </li>
-            </ul>
-            <p class="text-muted small mb-0">Copyright &copy; Tu divisa.com</p>
+            <!--Grid row-->
+            <div class="row py-5">
+
+                <div class="col-md-12 text-center">
+                    <p></p>
+                </div>
+
+            </div>
+
         </div>
-    </footer>
+        <div>
+            {% block content %}
+
+            {% endblock %}
+
+        </div>
+    </main>
+    <!--Main Layout-->
+    <footer class="footer text-center">
+            <div class="container">
+                <ul class="list-inline mb-5">
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="#">
+                            <i class="icon-social-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white mr-3" href="#">
+                            <i class="icon-social-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle text-white" href="#">
+                            <i class="icon-social-github"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text-muted small mb-0">Copyright &copy; Tu divisa.com</p>
+            </div>
+        </footer>
+
 </body>
 
 </html>
