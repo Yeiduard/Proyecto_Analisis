@@ -1,0 +1,11 @@
+input[type="number"]{
+
+    border: 1px dotted rgb(132, 19, 167);
+    border-radius: 0;
+    fill: aquamarine;
+  
+    -webkit-appearance: none;
+
+
+
+}
