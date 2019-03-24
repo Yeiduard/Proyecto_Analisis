@@ -14,7 +14,7 @@ def index():
 	
     title = " Tu divisa"
 
-    return render_template("index.html", title=title)
+    return render_template("Index.html", title=title)
 
 
 @app.route('/Tabla_dolar')
@@ -25,10 +25,7 @@ def client():
     return render_template("pruebagraf.html", x=x, y=y)
 
 
-def sumar(val1,val2):
-	
-	total= val1+val2
-	return total
+
 
 
 app.run(debug=True, port=5000)
