@@ -1,44 +1,48 @@
-#{% extends 'Base/base.html'%}
+{% extends 'Base/base.html'%}
 {% block title%} {{ title}} {% endblock%}
 {% block content %}
 {% from 'Macros/macro.html' import render_field %}
-<form>
-    Valor 1 <input type="number" name="val1" class="estilo/css.css" ref="estilo/css.css"><select name="opcion1"
-        value="opcion1" display: inline-block>
-        <option name="op1" value="dolar">dolar</option>
-        <option value="">pesos</option>
-        <option value="">Euro</option>
-
-    </select><br>
-    Valor 2 <input type="number" name="val2"><select name="opcion1" value="opcion1">
-        <option name="op1" value="dolar">dolar</option>
-        <option value="">pesos</option>
-        <option value="">Euro</option>
-    </select><br>
 
 
-    <script>
 
-        function sumar(val1, val2) {
-            if (op1=="dolar") {
-                alert("dolarrrrr")
-            }
-            if (val1 > 0 && val2 > 0) {
+    <div align="center" class="conainer-fluid" id="formulario" >
+        
+            Valor 2 <input type="number" name="val1" id="num1" >
+        <select name="opcion1"value="opcion1" >
+            <option name="op1" value="dolar">dolar</option>
+            <option value="">pesos</option>
+            <option value="">Euro</option>
 
+        </select><br>
+        Valor 2 <input type="number" name="val2" id="num2" >
+        <select name="opcion1" value="opcion1">
+            <option name="op1" value="dolar">dolar</option>
+            <option value="">pesos</option>
+            <option value="">Euro</option>
+        </select><br>
+
+
+        
+        <script>
+            function sumar(num1, num2) {
+               var numero1=document.getElementById("num1").value
+               var numero2=document.getElementById("num2").value
+            if (numero1 > 0 && numero2 > 0) {
                 var total;
-                total = va1 + val2;
+                total = parseFloat(numero1) + parseFloat(numero2);
                 alert("El valor es " + total);
-
             } else {
                 alert(" debe ingresar numeros ")
                 console.log("error en numeros digitados")
             }
+        }  
+                     
+        </script>
 
-        }
-    </script>
+        <input type="button" class="btn btn-primary" name="ver total " value="Calcular" onclick="sumar(num1,num2)">
+
+       
+    </div>
 
 
-    <input type="button" class="btn btn-primary" name="ver total " value="Calcular" onclick="sumar(val1,val2)">
-
-</form>
 {% endblock %}
