@@ -5,44 +5,268 @@
 
 
 
-    <div align="center" class="conainer-fluid" id="formulario" >
-        
-            Valor 2 <input type="number" name="val1" id="num1" >
-        <select name="opcion1"value="opcion1" >
-            <option name="op1" value="dolar">dolar</option>
-            <option value="">pesos</option>
-            <option value="">Euro</option>
+<div align="center" class="conainer-fluid" id="formulario">
 
-        </select><br>
-        Valor 2 <input type="number" name="val2" id="num2" >
-        <select name="opcion1" value="opcion1">
-            <option name="op1" value="dolar">dolar</option>
-            <option value="">pesos</option>
-            <option value="">Euro</option>
-        </select><br>
+    <p>tengo esta divisa </p>
+    <input type="number" name="val1" id="num1" hfer="css.css">
+    <select name="opcion1" id="p1">
+        <option name="conver" value=1 id="p1dll">dolar</option>
+        <option name="conver" value=2 id="p1cop">pesos</option>
+        <option name="conver" value=3 id="p1Eu">Euro</option>
+
+    </select><br>
+    <p>tengo esta divisa </p>
+    <input type="number" name="val2" id="num2">
+    <select name="opcion1" id="p2"> Divisa
+        <option name="conver" value=1 id="p2dll">dolar</option>
+        <option name="conver" value=2 id="p2cop">pesos</option>
+        <option name="conver" value=3 id="p2Eu">Euro</option>
+    </select><br>
+
+    <p> Quiero esta divisa </p>
+    <select name="opcion3" id="p3">
+        <option name="conver" value=1 id="p3dll">dolar</option>
+        <option name="conver" value=2 id="p3cop">pesos</option>
+        <option name="conver" value=3 id="p3Eu">Euro</option>
+    </select><br>
 
 
-        
-        <script>
-            function sumar(num1, num2) {
-               var numero1=document.getElementById("num1").value
-               var numero2=document.getElementById("num2").value
-            if (numero1 > 0 && numero2 > 0) {
-                var total;
-                total = parseFloat(numero1) + parseFloat(numero2);
-                alert("El valor es " + total);
+
+    <script>
+        function sumar(num1, num2, opcion1, opcion2, opcion3) {
+            var numero1 = document.getElementById("num1").value
+            var numero2 = document.getElementById("num2").value
+
+            if (numero1 >= 0 && numero2 >= 0) {
+                if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 1) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = valor1 + valor2;
+                    alert("El valor es " + total + "dll");
+                }
+                else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 2) {
+
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = valor1 + valor2;
+                    alert("El valor es " + total + "Cop");
+                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 3) {
+
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = valor1 + valor2;
+                    alert("El valor es " + total + "€");
+                }
+                else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 2) {
+
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = valor1 * 3200 + valor2 * 3200;
+                    alert("El valor es " + total + "Cop");
+
+                } else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 3) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = valor1 * 0.88 + valor2 * 0.88;
+                    alert("El valor es " + total + "€.");
+
+                } else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 1) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = valor1 + (valor2 / 3200);
+                    alert("El valor es " + total + "dll");
+
+                } else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 2) {
+
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = valor1 * 3200 + valor2;
+                    alert("El valor es " + total + "Cop");
+                } else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 3) {
+
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 * 0.88) + (valor2 * 0.00029);
+                    alert("El valor es " + total + "E");
+                }
+                else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 1) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1) + (valor2 * 1.13);
+                    alert("El valor es " + total + "dll");
+
+                }
+                else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 2) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 * 3200) + (valor2 * 3490.16);
+                    alert("El valor es " + total + "Cop");
+
+                } else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 3) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 * 0.88) + (valor2);
+                    alert("El valor es " + total + "E");
+
+                }
+                else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 1) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 / 3200) + (valor2);
+                    alert("El valor es " + total + "dll");
+
+                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 2) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1) + (valor2 * 3200);
+                    alert("El valor es " + total + "Cop");
+
+                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 3) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 * 0.00029) + (valor2 * 0.88);
+                    alert("El valor es " + total + "E");
+
+                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 1) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 / 3200) + (valor2 /3200);
+                    alert("El valor es " + total + "dll");
+
+                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 3) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 * 0.00029) + (valor2 * 0.00029);
+                    alert("El valor es " + total + "E");
+
+                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 1) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 / 3200) + (valor2 * 1.13);
+                    alert("El valor es " + total + "dll");
+
+                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 2) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1) + (valor2 * 3490.16);
+                    alert("El valor es " + total + "Cop");
+
+                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 3) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 * 0.0029) + (valor2);
+                    alert("El valor es " + total + "E");
+
+                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 1) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 * 1.13) + (valor2);
+                    alert("El valor es " + total + "dll");
+
+                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 2) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1 * 3490.16) + (valor2 * 3200);
+                    alert("El valor es " + total + "Cop");
+
+                }else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 3) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1) + (valor2*0.88) ;
+                    alert("El valor es " + total + "E");
+
+                }else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 1) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1*1.13) + (valor2/3200) ;
+                    alert("El valor es " + total + "dll");
+
+                }else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 3) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1) + (valor2*0.0029) ;
+                    alert("El valor es " + total + "E");
+
+                }else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 1) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1*1.13) + (valor2*1.13) ;
+                    alert("El valor es " + total + "dll");
+
+                }else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 2) {
+                    var total;
+                    valor1 = parseFloat(numero1)
+                    valor2 = parseFloat(numero2)
+
+                    total = (valor1*3490.16) + (valor2*3490.16) ;
+                    alert("El valor es " + total + "Cop");
+
+                }
             } else {
                 alert(" debe ingresar numeros ")
                 console.log("error en numeros digitados")
             }
-        }  
-                     
-        </script>
+        }
 
-        <input type="button" class="btn btn-primary" name="ver total " value="Calcular" onclick="sumar(num1,num2)">
 
-       
-    </div>
+    </script>
+
+
+    <input type="button" class="btn btn-primary" name="ver total " value="Calcular" onclick="sumar(num1,num2)">
+
+    <output> {{total}} </output>
+
+</div>
 
 
 {% endblock %}
