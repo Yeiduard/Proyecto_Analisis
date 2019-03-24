@@ -1,19 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hola brrrr</h1>
-</body>
-</html>
+{% extends 'Base/base.html'%}
+{% block title%} {{ title}} {% endblock%}
+{% block content %}
+{% from 'Macros/macro.html' import render_field %}
+<form>
+        valor 1 <input type="number" name="val1" >
+        Valor 2<input type="number" name="val2"  >
+     
 
+    <script>
 
+        function sumar(val1, val2) {
+            valor1=parseInt(val1.value);
+            valor2=parseInt(val2.value);
+          if (valor1>0 && valor2>0) {
+                var total;
+                total = valor1+valor2;
+                alert("El valor es " + total);
+                
+            } else {
+                alert(" debe ingresar numeros ")
+                console.log("error en numeros digitados")
+            }
 
+        }
+    </script>
 
+    
+    <input type="button" name="ver total " value="Calcular" onclick="sumar(val1,val2)">
 
-
-
+</form>
+{% endblock %}
