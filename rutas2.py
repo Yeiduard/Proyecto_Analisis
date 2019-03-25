@@ -10,14 +10,13 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    
-	
+
     title = " Tu divisa"
 
     return render_template("index.html", title=title)
 
 
-@app.route('/Tabla_dolar')
+@app.route('/pruebagraf.html')
 def client():
 
     x = td.x
@@ -25,7 +24,10 @@ def client():
     return render_template("pruebagraf.html", x=x, y=y)
 
 
+@app.route('/inversion.html', methods=['GET', 'POST'])
+def inversion():
 
+    title = " Tu divisa"
 
-
+    return render_template("inversion.html", title=title)
 app.run(debug=True, port=5000)
