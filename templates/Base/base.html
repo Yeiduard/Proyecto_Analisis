@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head id="hh">
     <title>Tu disiva.com $</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="estilo/css.css">
+    <LINK rel="stylesheet" type="text/css"
+     href="static/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -23,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar bg-dark">
 
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="http://127.0.0.1:5000">
                 <strong>Inicio</strong>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7"
@@ -33,7 +34,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home
+                        <a class="nav-link" href="http://127.0.0.1:5000">Home
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
@@ -71,7 +72,7 @@
                             diferentes divisas</h6>
 
                     </div>
-                    >
+                    
                 </div>
                 <!--Grid row-->
             </div>
@@ -81,21 +82,12 @@
     </div>
 </head>
 
-<body>
+<body id="conid">
 
     <main>
-        <div class="container">
-            <!--Grid row-->
-            <div class="row py-5">
-
-                <div class="col-md-12 text-center">
-                    <p></p>
-                </div>
-
-            </div>
-
-        </div>
-        <div>
+        <div class="container-fluid" >
+           
+        
             {% block content %}
 
             {% endblock %}

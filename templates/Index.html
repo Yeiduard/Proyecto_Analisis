@@ -5,8 +5,8 @@
 
 
 
-<div align="center" class="container-fluid" id="formulario">
-    <div class="row">
+<div align="center" class="container-fluid" id="conid">
+    <div class="row" id="hh">
 
         <div class="col-xs-6 col-sm-4">
             <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
@@ -34,28 +34,36 @@
                 </a>
             </div>
         </div>
-        <div class="col-xs-6 col-sm-4 bg-secondary">
+        <div class="col-xs-6 col-sm-4 ">
             <div>
-
-                    
-
-                <p>tengo esta divisa </p>
+                <br>
+                
+                
+                <br>
+                <h1>Tengo esta divisa </h1>
+                <br>
                 <input type="number" name="val1" id="num1" hfer="css.css">
                 <select name="opcion1" id="p1">
                     <option name="conver" value=1 id="p1dll">dolar</option>
                     <option name="conver" value=2 id="p1cop">pesos</option>
                     <option name="conver" value=3 id="p1Eu">Euro</option>
 
-                </select><br>
-                <p>tengo esta divisa </p>
+                </select>
+                <br>
+                <br>
+                <h1>Tengo esta divisa </h1>
+                <br>
                 <input type="number" name="val2" id="num2">
                 <select name="opcion1" id="p2"> Divisa
                     <option name="conver" value=1 id="p2dll">dolar</option>
                     <option name="conver" value=2 id="p2cop">pesos</option>
                     <option name="conver" value=3 id="p2Eu">Euro</option>
                 </select><br>
-
-                <p> Quiero esta divisa </p>
+                <br>
+                 <H1>
+                        Quiero esta divisa
+                 </H1>
+                <br>
                 <select name="opcion3" id="p3">
                     <option name="conver" value=1 id="p3dll">dolar</option>
                     <option name="conver" value=2 id="p3cop">pesos</option>
@@ -293,9 +301,9 @@
 
                 </script>
 
+                <br>
 
-                <input type="button" class="btn btn-primary" name="ver total " value="Calcular"
-                    onclick="sumar(num1,num2)">
+                <input type="button" name="ver total " value="Calcular" id="btt" onclick="sumar(num1,num2)">
 
                 <output> {{total}} </output>
             </div>
