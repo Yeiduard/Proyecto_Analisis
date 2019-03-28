@@ -6,25 +6,31 @@ import numpy as np
 import json
 import os
 import requests
+import logging
   
-r=requests.get('http://api.wahrungsrechner.org/v1/full/EUR/json?key=1881|hTayEgZ3xeee6SRdw3e~ZCvd9hmiA4iS')
-Usd=requests.get('http://api.wahrungsrechner.org/v1/full/USD/json?key=1881|hTayEgZ3xeee6SRdw3e~ZCvd9hmiA4iS')
-url = 'http://api.wahrungsrechner.org/v1/full/EUR/json?key={1881|hTayEgZ3xeee6SRdw3e~ZCvd9hmiA4iS}'
 
+
+try:
+      url = 'http://api.wahrungsrechner.org/v1/full/EUR/json?key={1881|hTayEgZ3xeee6SRdw3e~ZCvd9hmiA4iS}'
+
+      Usd=requests.get('http://api.wahrungsrechner.org/v1/full/USD/json?key=1881|hTayEgZ3xeee6SRdw3e~ZCvd9hmiA4iS')
+
+      r=requests.get('http://api.wahrungsrechner.org/v1/full/EUR/json?key=1881|hTayEgZ3xeee6SRdw3e~ZCvd9hmiA4iS')
+      respuesta = r.json()
+      t2=Usd.json()
+      rate = respuesta['result']['conversion'][30]['rate']
+      UsdtoCop= t2['result']['conversion'][30]['rate']
+      EuroDivisacolombiana=respuesta['result']['conversion'][30]['rate']
+      UsdToEU=t2['result']['conversion'][43]['rate']
+
+except :
+    logging.warning("Algo anda mal")
+    
 
 #d=pd.read_json(r)
-respuesta = r.json()
-t2=Usd.json()
 #print(t2)
-rate = respuesta['result']['conversion'][30]['rate']
-UsdtoCop= t2['result']['conversion'][30]['rate']
-EuroDivisacolombiana=respuesta['result']['conversion'][30]['rate']
-UsdToEU=t2['result']['conversion'][43]['rate']
-
-print(EuroDivisacolombiana)
+##print(EuroDivisacolombiana)
 #data = pd.read_csv('Tasa_representativa_del_Mercado.csv', header=0)
-
-
 
 # print(data)
 

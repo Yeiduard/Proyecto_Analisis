@@ -1,0 +1,353 @@
+{% extends 'Base/base.html'%}
+{% block title%} {{ title}} {% endblock%}
+{% block content %}
+{% from 'Macros/macro.html' import render_field %}
+
+
+
+<div align="center" class="container-fluid" id="conid">
+    <div class="row" id="hh">
+
+        <div class="col-xs-6 col-sm-4">
+            <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="2000">
+                        <img src="https://4.bp.blogspot.com/-KupvcaYhROs/VvMFkLEmn6I/AAAAAAAADD8/s2z4ZUm20oce19zLuFv_s7mIEStc9bgRA/s640/divisas.jpg"
+                            class="d-block " alt="..." width="640" height="427">
+                    </div>
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="https://i2.wp.com/www.movilescelular.com/wp-content/uploads/2016/06/cambio-de-divisas-en-android-4.jpg?resize=640%2C427"
+                            class="d-block " alt="..." wwidth="640" height="427">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i2.wp.com/www.informepastran.com/wp-content/uploads/2016/08/MERCADO-DE-CAMBIOS.jpg?fit=640%2C427"
+                            class="d-block " alt="..." width="640" height="427">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 ">
+            <div>
+                <br>
+
+
+                <br>
+                <h1>Tengo esta divisa </h1>
+                <br>
+                <input type="number" name="val1" id="num1" hfer="css.css">
+                <select name="opcion1" id="p1">
+                    <option name="conver" value=1 id="p1dll">dolar</option>
+                    <option name="conver" value=2 id="p1cop">pesos</option>
+                    <option name="conver" value=3 id="p1Eu">Euro</option>
+
+                </select>
+                <br>
+                <br>
+                <h1>Tengo esta divisa </h1>
+                <br>
+                <input type="number" name="val2" id="num2">
+                <select name="opcion1" id="p2"> Divisa
+                    <option name="conver" value=1 id="p2dll">dolar</option>
+                    <option name="conver" value=2 id="p2cop">pesos</option>
+                    <option name="conver" value=3 id="p2Eu">Euro</option>
+                </select><br>
+                <br>
+                <H1>
+                    Quiero esta divisa
+                </H1>
+                <br>
+                <select name="opcion3" id="p3">
+                    <option name="conver" value=1 id="p3dll">dolar</option>
+                    <option name="conver" value=2 id="p3cop">pesos</option>
+                    <option name="conver" value=3 id="p3Eu">Euro</option>
+                </select><br>
+
+
+
+                <script>
+                    var eurotoCol = {{ eurotoCol }};
+                    var usdtoCop = {{ UsdtoCop }}
+                    var usdtoEu = {{ usdtoEu }}
+
+                    function sumar(num1, num2, opcion1, opcion2, opcion3) {
+                        try {
+                            var numero1 = document.getElementById("num1").value
+                            var numero2 = document.getElementById("num2").value
+                            if (numero1 >= 0 && numero2 >= 0) {
+                                if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 1) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1) + valor2;
+                                    alert("El valor es " + total + "$");
+                                }
+                                else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 2) {
+
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = valor1 + valor2;
+                                    alert("El valor es " + total + "Cop");
+                                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 3) {
+
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = valor1 + valor2;
+                                    alert("El valor es " + total + "€");
+                                }
+                                else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 2) {
+
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = valor1 * usdtoCop + valor2 * usdtoCop;
+                                    alert("El valor es " + total + "Cop");
+
+                                } else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 3) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = valor1 * usdtoEu + valor2 * usdtoEu;
+                                    alert("El valor es " + total + "€.");
+
+                                } else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 1) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = valor1 + (valor2 / usdtoCop);
+                                    alert("El valor es " + total + "$");
+
+                                } else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 2) {
+
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = valor1 * usdtoCop + valor2;
+                                    alert("El valor es " + total + "Cop");
+                                } else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 3) {
+
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 * usdtoCop) + (valor2 / eurotoCol);
+                                    alert("El valor es " + total + "€");
+                                }
+                                else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 1) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1) + (valor2 * 1.13);
+                                    alert("El valor es " + total + "$");
+
+                                }
+                                else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 2) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 * usdtoCop) + (valor2 * eurotoCol);
+                                    alert("El valor es " + total + "Cop");
+
+                                } else if (document.getElementById("p1").value == 1 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 3) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 * usdtoEu) + (valor2);
+                                    alert("El valor es " + total + "€");
+
+                                }
+                                else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 1) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 / usdtoCop) + (valor2);
+                                    alert("El valor es " + total + "$");
+
+                                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 2) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1) + (valor2 * usdtoCop);
+                                    alert("El valor es " + total + "Cop");
+
+                                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 3) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 / eurotoCol) + (valor2 * usdtoEu);
+                                    alert("El valor es " + total + "€");
+
+                                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 1) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 / usdtoCop) + (valor2 / usdtoCop);
+                                    alert("El valor es " + total + "$");
+
+                                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 3) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 / eurotoCol) + (valor2 / eurotoCol);
+                                    alert("El valor es " + total + "€");
+
+                                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 1) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 / usdtoCop) + (valor2 * 1.13);
+                                    alert("El valor es " + total + "$");
+
+                                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 2) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1) + (valor2 * eurotoCol);
+                                    alert("El valor es " + total + "Cop");
+
+                                } else if (document.getElementById("p1").value == 2 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 3) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 / eurotoCol) + (valor2);
+                                    alert("El valor es " + total + "€");
+
+                                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 1) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 * 1.13) + (valor2);
+                                    alert("El valor es " + total + "$");
+
+                                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 2) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 * eurotoCol) + (valor2 * usdtoCop);
+                                    alert("El valor es " + total + "Cop");
+
+                                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 1 && document.getElementById("p3").value == 3) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1) + (valor2 * usdtoEu);
+                                    alert("El valor es " + total + "€");
+
+                                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 1) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 * 1.13) + (valor2 / usdtoCop);
+                                    alert("El valor es " + total + "$");
+
+                                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 2 && document.getElementById("p3").value == 3) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1) + (valor2 * eurotoCol);
+                                    alert("El valor es " + total + "€");
+
+                                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 1) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 * 1.13) + (valor2 * 1.13);
+                                    alert("El valor es " + total + "$");
+
+                                } else if (document.getElementById("p1").value == 3 && document.getElementById("p2").value == 3 && document.getElementById("p3").value == 2) {
+                                    var total;
+                                    valor1 = parseFloat(numero1)
+                                    valor2 = parseFloat(numero2)
+
+                                    total = (valor1 * eurotoCol) + (valor2 * eurotoCol);
+                                    alert("El valor es " + total + "Cop");
+
+                                }
+                            }else {
+                            alert(" debe ingresar numeros ")
+                            console.log("error en numeros digitados")
+                        }
+
+                        } catch (error) {
+                            alert("Error numero invalido")
+                        }
+                       
+
+                         
+                    }
+
+
+                </script>
+
+                <br>
+
+                <input type="button" name="ver total " value="Calcular" id="btt" onclick="sumar(num1,num2)">
+
+
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-4">
+            <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="2000">
+                        <img src="https://i0.wp.com/www.thebtctimes.com/wp-content/uploads/2019/02/jp-morgan-lanza-criptoactivo-criptofondos-de-pensiones-bolsa-de-caracas-y-mas.jpg?resize=640%2C427&ssl=1"
+                            class="d-block" alt="..." width="640" height="427">
+                    </div>
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="https://www.investopedia.com/thmb/YvvpPhIHFfX7AvPDW3uAxSCTEbo=/956x658/filters:no_upscale():max_bytes(150000):strip_icc()/share_of_global_economy-5bfd84e446e0fb0051581631"
+                            class="d-block  " alt="..." width="300" height="427">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://cdn.oem.com.mx/elsoldehidalgo/4897389.jpg" class="d-block " alt="..."
+                            width="640" height="427">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button1" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleInterval" role="button1" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}
