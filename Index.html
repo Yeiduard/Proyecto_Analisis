@@ -2,12 +2,8 @@
 {% block title%} {{ title}} {% endblock%}
 {% block content %}
 {% from 'Macros/macro.html' import render_field %}
-
-
-
 <div align="center" class="container-fluid" id="conid">
     <div class="row" id="hh">
-
         <div class="col-xs-6 col-sm-4">
             <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -37,8 +33,6 @@
         <div class="col-xs-6 col-sm-4 ">
             <div>
                 <br>
-
-
                 <br>
                 <h1>Tengo esta divisa </h1>
                 <br>
@@ -69,9 +63,7 @@
                     <option name="conver" value=2 id="p3cop">pesos</option>
                     <option name="conver" value=3 id="p3Eu">Euro</option>
                 </select><br>
-
-
-
+                
                 <script>
                     var eurotoCol = {{ eurotoCol }};
                     var usdtoCop = {{ UsdtoCop }}
@@ -296,27 +288,23 @@
                                     alert("El valor es " + total + "Cop");
 
                                 }
-                            }else {
-                            alert(" debe ingresar numeros ")
-                            console.log("error en numeros digitados")
-                        }
+                            } else {
+                                alert(" debe ingresar numeros mayores a 0")
+                                console.log("error en numeros digitados")
+                            }
 
                         } catch (error) {
                             alert("Error numero invalido")
                         }
-                       
 
-                         
+
+
                     }
 
 
                 </script>
-
                 <br>
-
                 <input type="button" name="ver total " value="Calcular" id="btt" onclick="sumar(num1,num2)">
-
-
             </div>
         </div>
         <div class="col-xs-6 col-sm-4">
@@ -348,6 +336,4 @@
 
     </div>
 </div>
-
-
 {% endblock %}
